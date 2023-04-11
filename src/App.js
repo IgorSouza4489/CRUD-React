@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import CarList from './components/listaCarros';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//mudei para class component
+class App extends Component {
+  render() {
+    return (
+      <div id='cssTest' className="container">
+        <h1 className="mt-5">Lista de carros</h1>
+        <CarList />
+      </div>
+    );
+  }
 }
 
 export default App;
